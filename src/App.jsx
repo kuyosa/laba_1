@@ -1,9 +1,13 @@
 import './App.css'
+import React, { useState } from "react";
+
 function App() {
-    const arr = [<p>1</p>, <p>2</p>, <p>3</p>];
-    return <div> {arr} </div>;
-  }
-  
-  
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+    <span>{count}</span> <button onClick={() => setCount(count + 1)}>+</button>
+    </div>
+  );
+}
   
 export default App
